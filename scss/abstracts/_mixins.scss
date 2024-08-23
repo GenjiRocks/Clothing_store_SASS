@@ -23,3 +23,11 @@
 
     
 }
+
+// mixin for flex position with 2 arguments
+@mixin flex-position($justCont:center , $alignIte:Center){
+    display: flex;
+    justify-content: $justCont;
+    align-items: $alignIte;
+}
+
