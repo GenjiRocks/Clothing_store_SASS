@@ -1,6 +1,7 @@
 .products{
     grid-column: 1/-1;
     grid-row: 3/4;
+    margin-bottom: 2rem;
 
     &-heading{
         margin: 5rem 0;
@@ -48,14 +49,26 @@
         visibility: hidden;
         transition: all 1s 0.5s;
 
+        @include response(lg){
+            padding: 1rem;
+        }
+
         &-heading{
             font-size: size(xl);
+
+            @include response(lg){
+                font-size: size(md);
+            }
         }
 
         &-price{
             font-size: size(lg);
             font-weight: 300;
             margin: 1rem 0;
+
+            @include response(lg){
+                font-size: size(sm);
+            }
 
             span{
                 font-weight: 600;
@@ -71,8 +84,13 @@
            display: block;
            border: .1rem solid color(quaternary);
            border-radius: 20px;
-           background-color: lighten(color(primary),20%)
-          
+           background-color: lighten(color(primary),20%);
+
+           @include response(lg){
+            padding: .2rem .5rem;
+        }
+           
+           
         }
 
     }
